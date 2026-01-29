@@ -66,5 +66,3 @@ function randomPopupText() {
   return texts[Math.floor(Math.random() * texts.length)];
 }
 
-  return texts[Math.floor(Math.random() * texts.length)];
-}
