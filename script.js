@@ -16,7 +16,17 @@ const taunts = [
 button.addEventListener("mouseenter", dodge);
 button.addEventListener("touchstart", dodge);
 
+
+let hasGoneFullscreen = false;
+
 function dodge(e) {
+  // 👇 Enter fullscreen only once
+  if (!hasGoneFullscreen) {
+    goFullscreen();
+    hasGoneFullscreen = true;
+  }
+
+  // 👇 Everything else: count miss, taunt, move button, popup
   misses++;
   counter.textContent = `Misses: ${misses}`;
   taunt.textContent = taunts[Math.floor(Math.random() * taunts.length)];
@@ -32,6 +42,8 @@ function dodge(e) {
 
   createPopup(randX, randY);
 }
+
+
 
 function createPopup(x, y) {
   const popup = document.createElement("div");
