@@ -13,13 +13,13 @@ const taunts = [
   "Getting tired?"
 ];
 
+// Ensure transform doesn't block movement
+button.style.transform = "none";
+
 button.addEventListener("mouseenter", dodge);
 button.addEventListener("touchstart", dodge);
 
 function dodge(e) {
-  // Remove initial centering transform so button moves correctly
-  button.style.transform = "none";
-
   misses++;
   counter.textContent = `Misses: ${misses}`;
   taunt.textContent = taunts[Math.floor(Math.random() * taunts.length)];
@@ -34,10 +34,10 @@ function dodge(e) {
   button.style.left = `${randX}px`;
   button.style.top = `${randY}px`;
 
-  createPopup(randX, randY);
+  createPopup();
 }
 
-function createPopup(x, y) {
+function createPopup() {
   const popup = document.createElement("div");
   popup.className = "popup";
   popup.style.left = `${Math.random() * (window.innerWidth - 200)}px`;
