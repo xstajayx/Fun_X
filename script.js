@@ -16,17 +16,10 @@ const taunts = [
 button.addEventListener("mouseenter", dodge);
 button.addEventListener("touchstart", dodge);
 
-
-let hasGoneFullscreen = false;
-
 function dodge(e) {
-  // 👇 Enter fullscreen only once
-  if (!hasGoneFullscreen) {
-    goFullscreen();
-    hasGoneFullscreen = true;
-  }
+  // Remove initial centering transform so button moves correctly
+  button.style.transform = "none";
 
-  // 👇 Everything else: count miss, taunt, move button, popup
   misses++;
   counter.textContent = `Misses: ${misses}`;
   taunt.textContent = taunts[Math.floor(Math.random() * taunts.length)];
@@ -34,16 +27,15 @@ function dodge(e) {
   const maxX = container.clientWidth - button.clientWidth;
   const maxY = container.clientHeight - button.clientHeight;
 
-  const randX = Math.random() * maxX;
-  const randY = Math.random() * maxY;
+  const padding = 20;
+  const randX = Math.max(padding, Math.min(Math.random() * maxX, maxX - padding));
+  const randY = Math.max(padding, Math.min(Math.random() * maxY, maxY - padding));
 
   button.style.left = `${randX}px`;
   button.style.top = `${randY}px`;
 
   createPopup(randX, randY);
 }
-
-
 
 function createPopup(x, y) {
   const popup = document.createElement("div");
@@ -58,12 +50,21 @@ function createPopup(x, y) {
 
 function randomPopupText() {
   const texts = [
-    "⚠️ ERROR: You suck",
-    "📢 SYSTEM NOTICE: Nope",
-    "💥 BUTTON DODGED!",
-    "😈 Try again, mortal",
-    "🔒 Locked out (just kidding)",
-    "🛠️ Reboot required"
+    "⚠️ ERROR: Dick Head",
+    "🤡 System detects a Cunt",
+    "📢 ALERT: Fat fingers detected",
+    "💥 Button successfully outsmarted you",
+    "😈 Nice try, human",
+    "🧠 Hint: Try being faster",
+    "🚫 Access denied: Reflexes too slow",
+    "😂 This is painful to watch",
+    "🎯 Missed! Again! Twat!",
+    "⌛ Loading… your defeat",
+    "🕹️ Maybe gaming isn’t your thing",
+    "📉 Accuracy level: Questionable"
   ];
+  return texts[Math.floor(Math.random() * texts.length)];
+}
+
   return texts[Math.floor(Math.random() * texts.length)];
 }
