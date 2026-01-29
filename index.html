@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Uncatchable X: Chaos Edition</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="header">
+        <p class="eyebrow">Uncatchable X: Chaos Edition</p>
+        <h1>Catch the Chaos</h1>
+        <p class="taunt" id="taunt">Too slow!</p>
+      </header>
+
+      <section class="arena" id="arena">
+        <button class="x-button" id="xButton" aria-label="Catch the X">
+          X
+        </button>
+      </section>
+
+      <footer class="stats">
+        <p id="missCounter">Misses: 0</p>
+      </footer>
+    </main>
+
+    <a
+      class="share-button"
+      href="https://wa.me/?text=Try%20to%20catch%20this%20X%20button!%20I%20bet%20you%20can't!%20%F0%9F%98%88"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Share this challenge on WhatsApp
+    </a>
+
+    <div class="flash" id="flash"></div>
+
+    <audio id="boingSound" preload="auto">
+      <source src="https://assets.mixkit.co/sfx/preview/mixkit-cartoon-bounce-2875.mp3" type="audio/mpeg" />
+    </audio>
+    <audio id="laughSound" preload="auto">
+      <source src="https://assets.mixkit.co/sfx/preview/mixkit-evil-laugh-443.mp3" type="audio/mpeg" />
+    </audio>
+
+    <script src="script.js"></script>
+  </body>
+</html>
