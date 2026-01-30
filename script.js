@@ -5,12 +5,12 @@ const container = document.querySelector(".main-container");
 
 let misses = 0;
 const taunts = [
-  "Missed again! 😆",
-  "Try harder!",
-  "Almost... NOT!",
-  "You're really bad at this",
-  "Give up yet?",
-  "Getting tired?"
+  "Shit Face! 😆",
+  "Prick!",
+  "Pussy!",
+  "Pig Fucker",
+  "Arsehole",
+  "Dick Head"
 ];
 
 // Ensure transform doesn't block movement
@@ -21,7 +21,7 @@ button.addEventListener("touchstart", dodge);
 
 function dodge(e) {
   misses++;
-  counter.textContent = `Misses: ${misses}`;
+  counter.textContent = `Furry %: ${misses}`;
   taunt.textContent = taunts[Math.floor(Math.random() * taunts.length)];
 
   const maxX = container.clientWidth - button.clientWidth;
