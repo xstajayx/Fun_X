@@ -5,12 +5,12 @@ const container = document.querySelector(".main-container");
 
 let misses = 0;
 const taunts = [
-  "Shit Face! 😆",
+  "What a Shit Face! 😆",
   "Prick!",
-  "Pussy!",
+  "Mate, Your a Pussy!",
   "Pig Fucker",
-  "Arsehole",
-  "Dick Head"
+  "What a Arsehole",
+  "Dick Head!"
 ];
 
 // Ensure transform doesn't block movement
