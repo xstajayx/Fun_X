@@ -5,12 +5,12 @@ const container = document.querySelector(".main-container");
 
 let misses = 0;
 const taunts = [
-  "What a Shit Face! 😆",
-  "Prick!",
-  "Mate, Your a Pussy!",
-  "Pig Fucker",
-  "What a Arsehole",
-  "Dick Head!"
+  "What was that! 😆",
+  "Come on!",
+  "Mate, dont give up!",
+  "Try again",
+  "Missed again",
+  "Fail"
 ];
 
 // Ensure transform doesn't block movement
@@ -50,15 +50,15 @@ function createPopup() {
 
 function randomPopupText() {
   const texts = [
-    "⚠️ ERROR: Dick Head",
-    "🤡 System detects a Cunt",
+    "⚠️ ERROR: Fail",
+    "🤡 System detects a unknown",
     "📢 ALERT: Fat fingers detected",
     "💥 Button successfully outsmarted you",
     "😈 Nice try, human",
     "🧠 Hint: Try being faster",
     "🚫 Access denied: Reflexes too slow",
     "😂 This is painful to watch",
-    "🎯 Missed! Again! Twat!",
+    "🎯 Missed! Again! HAHA!",
     "⌛ Loading… your defeat",
     "🕹️ Maybe gaming isn’t your thing",
     "📉 Accuracy level: Questionable"
